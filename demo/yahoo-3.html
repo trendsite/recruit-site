@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="robots" content="noindex, nofollow">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>株式会社商事101 - 採用情報</title>
+  <title>株式会社商事102 - 採用情報</title>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -41,17 +41,27 @@
     .header {
       background: linear-gradient(135deg, var(--primary), var(--secondary));
       color: white;
-      padding: 80px 20px 100px;
+      padding: 80px 20px 120px;
       text-align: center;
       position: relative;
       clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
     }
     .header h1 {
       font-size: clamp(24px, 5vw, 42px);
-      margin: 0 0 10px;
+      margin: 0 0 20px;
       font-weight: 900;
       text-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
+    
+    /* ★変更点2：会社名のフォントを大きく */
+    .header p.company-name {
+      font-size: clamp(2rem, 4vw, 3rem); /* 特大サイズ */
+      font-weight: 900;
+      margin-top: 10px;
+      line-height: 1.2;
+      text-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
     .tags {
       display: flex;
       justify-content: center;
@@ -69,7 +79,7 @@
     }
     .container {
       max-width: 900px;
-      margin: -50px auto 40px;
+      margin: -70px auto 40px;
       padding: 0 20px;
       position: relative;
       z-index: 10;
@@ -146,7 +156,6 @@
       font-weight: bold;
     }
 
-    /* CVボタン（絶対中央寄せ） */
     .cta-container {
       position: fixed;
       bottom: 30px;
@@ -178,10 +187,19 @@
       padding: 5px;
     }
     
+    /* マップ用スタイル */
+    .map-container iframe {
+      width: 100%;
+      height: 350px;
+      border: none;
+      border-radius: 10px;
+    }
+
     @media (max-width: 600px) {
       table.data-table th, table.data-table td { display: block; width: 100%; border: none; padding: 5px 0; }
       table.data-table th { color: var(--primary); font-size: 0.9em; margin-top: 10px; }
       .apply-btn { font-size: 1em; padding: 15px 30px; }
+      .header p.company-name { font-size: 1.8rem; }
     }
   </style>
 </head>
@@ -195,10 +213,10 @@
       <div class="tag">正社員</div>
       
     </div>
-    <h1>経理</h1>
-    <p>株式会社商事101</p>
-    <div style="margin-top:15px; font-size:0.9em;">
-      📍 茨城県 
+    <h1>経理の仕事で求人公開中！</h1>
+    <p class="company-name">株式会社商事102</p>
+    <div style="margin-top:20px; font-size:0.9em;">
+      📍 茨城県 千代田区1-1-1
     </div>
   </header>
 
@@ -291,27 +309,26 @@
         <h3>一緒に働く仲間へ</h3>
         <p>「やってみたい」という気持ちがあれば、経験は問いません。あなたのポテンシャルを最大限に引き出す環境がここにはあります。私たちと一緒に、新しいキャリアの一歩を踏み出しませんか？</p>
       </div>
-
-      <div style="margin-top:20px; text-align:center;">
-        <a href="https://www.yahoo.co.jp" target="_blank" style="color:var(--primary); text-decoration:underline;">
-          公式ホームページを見る
-        </a>
-      </div>
     </section>
 
     <section class="animate-section">
-      <h2>選考プロセス</h2>
-      <div style="margin-left:20px;">
-        <ol style="padding-left:0; list-style-position:inside;">
-           
-        </ol>
-      </div>
-
-      <h3>アピールポイント</h3>
+      <h2>アピールポイント</h2>
       <div class="tags">
         
       </div>
       <p style="margin-top:10px;"></p>
+    </section>
+
+    <section class="animate-section">
+      <h2>勤務地アクセス</h2>
+      <p style="margin-bottom:10px; font-weight:bold;">茨城県千代田区1-1-1</p>
+      <div class="map-container">
+        <iframe 
+          loading="lazy" 
+          allowfullscreen 
+          src="https://maps.google.com/maps?q=%E8%8C%A8%E5%9F%8E%E7%9C%8C%E5%8D%83%E4%BB%A3%E7%94%B0%E5%8C%BA1-1-1&output=embed&t=m&z=16">
+        </iframe>
+      </div>
     </section>
     
     <div style="height:120px;"></div>
