@@ -1,0 +1,364 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>田中商事株式会社 - 採用情報</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #007bff;
+      --secondary: #00d4ff;
+      --accent: #ff4757;
+      --text: #333;
+      --bg: #f0f4f8;
+      --card-bg: #ffffff;
+    }
+    body {
+      margin: 0;
+      font-family: 'Noto Sans JP', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+    .animate-section {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+    .animate-section.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    @keyframes heartbeat {
+      0% { transform: translate(-50%, 0) scale(1); box-shadow: 0 0 0 0 rgba(255, 71, 87, 0.7); }
+      70% { transform: translate(-50%, 0) scale(1.05); box-shadow: 0 0 0 20px rgba(255, 71, 87, 0); }
+      100% { transform: translate(-50%, 0) scale(1); box-shadow: 0 0 0 0 rgba(255, 71, 87, 0); }
+    }
+    .header {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      padding: 80px 20px 120px;
+      text-align: center;
+      position: relative;
+      clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    }
+    .header h1 {
+      font-size: clamp(24px, 5vw, 42px);
+      margin: 0 0 20px;
+      font-weight: 900;
+      text-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    .header p.company-name {
+      font-size: clamp(1.4rem, 2.8vw, 2.1rem);
+      font-weight: 900;
+      margin-top: 10px;
+      line-height: 1.2;
+      text-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .tags {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .tag {
+      background: rgba(255,255,255,0.25);
+      backdrop-filter: blur(4px);
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: 0.9em;
+      font-weight: bold;
+    }
+    .container {
+      max-width: 900px;
+      margin: -70px auto 40px;
+      padding: 0 20px;
+      position: relative;
+      z-index: 10;
+    }
+    section {
+      background: var(--card-bg);
+      border-radius: 20px;
+      padding: 40px;
+      margin-bottom: 40px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+      border-top: 4px solid var(--primary);
+    }
+    h2 {
+      color: var(--primary);
+      font-size: 1.6em;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 15px;
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+    }
+    h2::before {
+      content: '';
+      display: inline-block;
+      width: 8px;
+      height: 30px;
+      background: var(--primary);
+      margin-right: 15px;
+      border-radius: 4px;
+    }
+    h3 {
+      font-size: 1.2em;
+      color: #555;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      background: #f7f9fb;
+      padding: 10px 15px;
+      border-radius: 8px;
+      border-left: 4px solid var(--secondary);
+    }
+    ul.detail-list {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 15px;
+    }
+    ul.detail-list li {
+      background: #f8f9fa;
+      padding: 15px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+    }
+    .label { font-size: 0.85em; color: #888; font-weight: bold; margin-bottom: 5px; }
+    .value { font-size: 1.1em; font-weight: bold; color: #333; }
+    table.data-table { width: 100%; border-collapse: collapse; }
+    table.data-table th, table.data-table td { padding: 15px; border-bottom: 1px solid #eee; text-align: left; }
+    table.data-table th { width: 30%; color: #666; font-weight: normal; background: #fff; }
+    table.data-table td { font-weight: bold; }
+    
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+    .feature-item {
+      background: #e6f7ff;
+      color: var(--primary);
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .cta-container {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: auto;
+      z-index: 9999;
+      text-align: center;
+    }
+    .apply-btn {
+      display: inline-block;
+      background: linear-gradient(45deg, #ff4757, #ff6b81);
+      color: white;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 1.2em;
+      padding: 20px 60px;
+      border-radius: 50px;
+      box-shadow: 0 10px 25px rgba(255, 71, 87, 0.4);
+      animation: heartbeat 2s infinite; 
+      white-space: nowrap;
+    }
+    
+    /* ★修正：デモバーを赤色・大きく・固定 */
+    .demo-bar {
+      background: #ff0000;
+      color: #ffffff;
+      text-align: center;
+      font-weight: bold;
+      font-size: 18px;
+      padding: 15px 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 99999;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    
+    .map-container iframe {
+      width: 100%;
+      height: 350px;
+      border: none;
+      border-radius: 10px;
+    }
+    .map-error {
+      background: #eee;
+      color: #666;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      table.data-table th, table.data-table td { display: block; width: 100%; border: none; padding: 5px 0; }
+      table.data-table th { color: var(--primary); font-size: 0.9em; margin-top: 10px; }
+      .apply-btn { font-size: 1em; padding: 15px 30px; }
+      .header p.company-name { font-size: 1.3rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="demo-bar">※デモページ：作成から1時間後に自動削除されます</div>
+
+  <header class="header animate-section">
+    <div class="tags">
+      <div class="tag">不動産</div>
+      <div class="tag">正社員</div>
+      
+    </div>
+    <h1>人事の仕事で求人公開中！</h1>
+    <p class="company-name">田中商事株式会社</p>
+    <div style="margin-top:20px; font-size:0.9em;">
+      📍 東京都 渋谷区恵比寿4-20-3   恵比寿ガーデンプレイスタワー18階
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <section class="animate-section">
+      <h2>採用メッセージ</h2>
+      <p style="font-size:1.1em; font-weight:bold; color:#555; margin-bottom:20px;">
+        私たちは業界のリーディングカンパニーとして、常に新しい価値の創造に挑戦し続けています。今回、事業拡大に伴い、共に未来を創る新しい仲間を募集することになりました。
+      </p>
+      <div class="features-grid">
+        <div class="feature-item">✔ 安定した経営基盤で長期的に働ける</div><div class="feature-item">✔ 充実した研修制度でスキルアップを支援</div><div class="feature-item">✔ ワークライフバランスを重視した環境</div><div class="feature-item">✔ チームワークを重視したアットホームな雰囲気</div>
+      </div>
+      <p>風通しの良い職場環境で、若手からベテランまで幅広い年代が活躍しています。未経験からスタートした社員も多く、研修制度やサポート体制も万全です。</p>
+    </section>
+
+    <section class="animate-section">
+      <h2>仕事内容</h2>
+      <p style="font-size:1.1em; font-weight:bold; color:var(--primary);">
+        今入っている保険の見直しをお客様にご提案するお仕事になります。 
+      </p>
+      <h3>具体的な業務</h3>
+      <p>・既存顧客へのルート営業<br>・見積書作成および提案<br>・納品後のアフターフォロー</p>
+      <h3>求める人物像</h3>
+      <p>・明るく元気な対応ができる方<br>・チームワークを大切にできる方<br>・新しいことに挑戦する意欲のある方</p>
+    </section>
+
+    <section class="animate-section">
+      <h2>募集要項・条件</h2>
+      <ul class="detail-list">
+        <li><span class="label">雇用形態</span><span class="value">正社員</span></li>
+        <li><span class="label">試用期間</span><span class="value">3ヶ月</span></li>
+        <li><span class="label">勤務時間</span><span class="value">9:00 〜 18:00 (実働8時間)</span></li>
+        <li><span class="label">みなし残業</span><span class="value">20時間</span></li>
+      </ul>
+      <div style="margin-top:30px;">
+        <table class="data-table">
+          <tr>
+            <th>給与</th>
+            <td style="font-size:1.3em; color:var(--accent);">
+              年収 200000円 〜 300000円
+            </td>
+          </tr>
+          <tr><th>インセンティブ</th><td>あり (業績による)</td></tr>
+          <tr><th>フルコミッション</th><td>なし</td></tr>
+          <tr><th>賞与</th><td>規定なし</td></tr>
+          <tr><th>決算月</th><td>4月</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section class="animate-section">
+      <h2>休日・福利厚生</h2>
+      <table class="data-table">
+        <tr><th>休日</th><td>完全週休2日制 (土日祝)</td></tr>
+        <tr><th>休暇</th><td>年末年始 / 夏季 / 有給休暇</td></tr>
+        <tr><th>年間休日</th><td>120日</td></tr>
+        <tr><th>補足</th><td>会社カレンダーによる</td></tr>
+        <tr><th>福利厚生</th><td>各種社会保険完備 / 交通費支給</td></tr>
+        <tr><th>その他</th><td>資格取得支援制度 / 定期健康診断</td></tr>
+        <tr><th>退職金制度</th><td>あり (勤続3年以上)</td></tr>
+      </table>
+    </section>
+
+    <section class="animate-section">
+      <h2>応募資格</h2>
+      <ul class="detail-list">
+        <li><span class="label">学歴</span><span class="value">不問</span></li>
+        <li><span class="label">必須経験</span><span class="value">未経験OK</span></li>
+        <li><span class="label">経験月数</span><span class="value">特になし</span></li>
+        <li><span class="label">必須資格</span><span class="value">普通自動車免許 (AT限定可)</span></li>
+        <li><span class="label">歓迎スキル</span><span class="value">基本的なPCスキル</span></li>
+      </ul>
+    </section>
+
+    <section class="animate-section">
+      <h2>企業情報</h2>
+      <ul class="detail-list">
+        <li><span class="label">正社員数</span><span class="value">10名</span></li>
+        <li><span class="label">パート・アルバイト</span><span class="value">5名</span></li>
+        <li><span class="label">平均年齢</span><span class="value">32歳</span></li>
+        <li><span class="label">男女比</span><span class="value">男性 6 : 女性 4</span></li>
+      </ul>
+      <div style="margin-top:30px; background:#f9f9f9; padding:20px; border-radius:10px;">
+        <h3>一緒に働く仲間へ</h3>
+        <p>「やってみたい」という気持ちがあれば、経験は問いません。あなたのポテンシャルを最大限に引き出す環境がここにはあります。私たちと一緒に、新しいキャリアの一歩を踏み出しませんか？</p>
+      </div>
+    </section>
+
+    <section class="animate-section">
+      <h2>勤務地アクセス</h2>
+      <p style="margin-bottom:10px; font-weight:bold; font-size:1.1em;">東京都 渋谷区恵比寿4-20-3   恵比寿ガーデンプレイスタワー18階</p>
+      
+      <div class="map-container">
+        <iframe 
+          loading="lazy" 
+          allowfullscreen 
+          src="https://maps.google.com/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%B8%8B%E8%B0%B7%E5%8C%BA%E6%81%B5%E6%AF%94%E5%AF%BF4-20-3%E6%81%B5%E6%AF%94%E5%AF%BF%E3%82%AC%E3%83%BC%E3%83%87%E3%83%B3%E3%83%97%E3%83%AC%E3%82%A4%E3%82%B9%E3%82%BF%E3%83%AF%E3%83%BC18%E9%9A%8E&output=embed&t=m&z=16">
+        </iframe>
+      </div>
+    </section>
+    
+    <div style="height:120px;"></div>
+
+  </main>
+
+  <div class="cta-container animate-section">
+    <a href="https://www.realideal.jp/" class="apply-btn" target="_blank">
+      公式サイトで応募する
+    </a>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.animate-section').forEach(section => {
+        observer.observe(section);
+      });
+    });
+  </script>
+
+</body>
+</html>
+  
