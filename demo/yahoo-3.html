@@ -5,13 +5,13 @@
   <meta charset="UTF-8">
   <meta name="robots" content="noindex, nofollow">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>株式会社商事59 - 採用情報</title>
+  <title>株式会社商事82 - 採用情報</title>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #007bff; /* 青 */
-      --secondary: #00d4ff; /* 水色 */
-      --accent: #ff4757; /* 赤 */
+      --primary: #007bff;
+      --secondary: #00d4ff;
+      --accent: #ff4757;
       --text: #333;
       --bg: #f0f4f8;
       --card-bg: #ffffff;
@@ -25,7 +25,7 @@
       overflow-x: hidden;
     }
 
-    /* アニメーション: 下から浮き上がる */
+    /* アニメーション */
     .animate-section {
       opacity: 0;
       transform: translateY(50px);
@@ -35,8 +35,6 @@
       opacity: 1;
       transform: translateY(0);
     }
-
-    /* ボタンの鼓動アニメーション */
     @keyframes heartbeat {
       0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 71, 87, 0.7); }
       70% { transform: scale(1.05); box-shadow: 0 0 0 20px rgba(255, 71, 87, 0); }
@@ -57,11 +55,6 @@
       margin: 0 0 10px;
       font-weight: 900;
       text-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
-    .header p {
-      font-size: 1.2em;
-      opacity: 0.95;
-      font-weight: 500;
     }
     .tags {
       display: flex;
@@ -141,36 +134,13 @@
       display: flex;
       flex-direction: column;
     }
-    .label {
-      font-size: 0.85em;
-      color: #888;
-      font-weight: bold;
-      margin-bottom: 5px;
-    }
-    .value {
-      font-size: 1.1em;
-      font-weight: bold;
-      color: #333;
-    }
+    .label { font-size: 0.85em; color: #888; font-weight: bold; margin-bottom: 5px; }
+    .value { font-size: 1.1em; font-weight: bold; color: #333; }
 
-    table.data-table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-    table.data-table th, table.data-table td {
-      padding: 15px;
-      border-bottom: 1px solid #eee;
-      text-align: left;
-    }
-    table.data-table th {
-      width: 30%;
-      color: #666;
-      font-weight: normal;
-      background: #fff;
-    }
-    table.data-table td {
-      font-weight: bold;
-    }
+    table.data-table { width: 100%; border-collapse: collapse; }
+    table.data-table th, table.data-table td { padding: 15px; border-bottom: 1px solid #eee; text-align: left; }
+    table.data-table th { width: 30%; color: #666; font-weight: normal; background: #fff; }
+    table.data-table td { font-weight: bold; }
 
     /* 魅力ポイント（Script生成） */
     .features-grid {
@@ -188,28 +158,31 @@
       font-weight: bold;
     }
 
-    /* CVボタン（追従） */
-    .cta-sticky {
+    /* ★CVボタン（修正：確実な中央寄せ） */
+    .cta-container {
       position: fixed;
       bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 90%;
-      max-width: 600px;
+      left: 0;
+      right: 0;
+      width: 100%;
       z-index: 100;
-      text-align: center;
+      display: flex;
+      justify-content: center; /* Flexboxで中央寄せ */
+      pointer-events: none; /* コンテナ自体はクリックを邪魔しない */
     }
     .apply-btn {
-      display: block;
+      pointer-events: auto; /* ボタンはクリック可能 */
       background: linear-gradient(45deg, #ff4757, #ff6b81);
       color: white;
       text-decoration: none;
       font-weight: 900;
       font-size: 1.2em;
-      padding: 20px;
+      padding: 20px 60px;
       border-radius: 50px;
       box-shadow: 0 10px 25px rgba(255, 71, 87, 0.4);
       animation: heartbeat 2s infinite; 
+      text-align: center;
+      max-width: 90%;
     }
     
     .demo-bar {
@@ -221,12 +194,9 @@
     }
     
     @media (max-width: 600px) {
-      table.data-table th, table.data-table td {
-        display: block; width: 100%; border: none; padding: 5px 0;
-      }
-      table.data-table th {
-        color: var(--primary); font-size: 0.9em; margin-top: 10px;
-      }
+      table.data-table th, table.data-table td { display: block; width: 100%; border: none; padding: 5px 0; }
+      table.data-table th { color: var(--primary); font-size: 0.9em; margin-top: 10px; }
+      .apply-btn { font-size: 1em; padding: 15px 40px; }
     }
   </style>
 </head>
@@ -240,8 +210,8 @@
       <div class="tag">正社員</div>
       <div class="tag"></div>
     </div>
-    <h1>経理 ()</h1>
-    <p>株式会社商事59</p>
+    <h1>経理 </h1>
+    <p>株式会社商事82</p>
     <div style="margin-top:15px; font-size:0.9em;">
       📍 茨城県 
     </div>
@@ -363,7 +333,7 @@
 
   </main>
 
-  <div class="cta-sticky animate-section">
+  <div class="cta-container animate-section">
     <a href="https://www.yahoo.co.jp" class="apply-btn" target="_blank">
       公式サイトで応募する
     </a>
