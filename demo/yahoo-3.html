@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="robots" content="noindex, nofollow">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>株式会社商事82 - 採用情報</title>
+  <title>株式会社商事101 - 採用情報</title>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -24,8 +24,6 @@
       line-height: 1.8;
       overflow-x: hidden;
     }
-
-    /* アニメーション */
     .animate-section {
       opacity: 0;
       transform: translateY(50px);
@@ -36,12 +34,10 @@
       transform: translateY(0);
     }
     @keyframes heartbeat {
-      0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 71, 87, 0.7); }
-      70% { transform: scale(1.05); box-shadow: 0 0 0 20px rgba(255, 71, 87, 0); }
-      100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 71, 87, 0); }
+      0% { transform: translate(-50%, 0) scale(1); box-shadow: 0 0 0 0 rgba(255, 71, 87, 0.7); }
+      70% { transform: translate(-50%, 0) scale(1.05); box-shadow: 0 0 0 20px rgba(255, 71, 87, 0); }
+      100% { transform: translate(-50%, 0) scale(1); box-shadow: 0 0 0 0 rgba(255, 71, 87, 0); }
     }
-
-    /* ヘッダー */
     .header {
       background: linear-gradient(135deg, var(--primary), var(--secondary));
       color: white;
@@ -71,8 +67,6 @@
       font-size: 0.9em;
       font-weight: bold;
     }
-
-    /* メインコンテナ */
     .container {
       max-width: 900px;
       margin: -50px auto 40px;
@@ -80,8 +74,6 @@
       position: relative;
       z-index: 10;
     }
-
-    /* セクション共通 */
     section {
       background: var(--card-bg);
       border-radius: 20px;
@@ -118,8 +110,6 @@
       border-radius: 8px;
       border-left: 4px solid var(--secondary);
     }
-
-    /* リスト・テーブル */
     ul.detail-list {
       list-style: none;
       padding: 0;
@@ -136,13 +126,11 @@
     }
     .label { font-size: 0.85em; color: #888; font-weight: bold; margin-bottom: 5px; }
     .value { font-size: 1.1em; font-weight: bold; color: #333; }
-
     table.data-table { width: 100%; border-collapse: collapse; }
     table.data-table th, table.data-table td { padding: 15px; border-bottom: 1px solid #eee; text-align: left; }
     table.data-table th { width: 30%; color: #666; font-weight: normal; background: #fff; }
     table.data-table td { font-weight: bold; }
-
-    /* 魅力ポイント（Script生成） */
+    
     .features-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -158,20 +146,18 @@
       font-weight: bold;
     }
 
-    /* ★CVボタン（修正：確実な中央寄せ） */
+    /* CVボタン（絶対中央寄せ） */
     .cta-container {
       position: fixed;
-      bottom: 20px;
-      left: 0;
-      right: 0;
-      width: 100%;
-      z-index: 100;
-      display: flex;
-      justify-content: center; /* Flexboxで中央寄せ */
-      pointer-events: none; /* コンテナ自体はクリックを邪魔しない */
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: auto;
+      z-index: 9999;
+      text-align: center;
     }
     .apply-btn {
-      pointer-events: auto; /* ボタンはクリック可能 */
+      display: inline-block;
       background: linear-gradient(45deg, #ff4757, #ff6b81);
       color: white;
       text-decoration: none;
@@ -181,8 +167,7 @@
       border-radius: 50px;
       box-shadow: 0 10px 25px rgba(255, 71, 87, 0.4);
       animation: heartbeat 2s infinite; 
-      text-align: center;
-      max-width: 90%;
+      white-space: nowrap;
     }
     
     .demo-bar {
@@ -196,7 +181,7 @@
     @media (max-width: 600px) {
       table.data-table th, table.data-table td { display: block; width: 100%; border: none; padding: 5px 0; }
       table.data-table th { color: var(--primary); font-size: 0.9em; margin-top: 10px; }
-      .apply-btn { font-size: 1em; padding: 15px 40px; }
+      .apply-btn { font-size: 1em; padding: 15px 30px; }
     }
   </style>
 </head>
@@ -208,10 +193,10 @@
     <div class="tags">
       <div class="tag">不動産</div>
       <div class="tag">正社員</div>
-      <div class="tag"></div>
+      
     </div>
-    <h1>経理 </h1>
-    <p>株式会社商事82</p>
+    <h1>経理</h1>
+    <p>株式会社商事101</p>
     <div style="margin-top:15px; font-size:0.9em;">
       📍 茨城県 
     </div>
@@ -237,10 +222,10 @@
       </p>
       
       <h3>具体的な業務</h3>
-      <p></p>
+      <p>・既存顧客へのルート営業<br>・見積書作成および提案<br>・納品後のアフターフォロー</p>
 
       <h3>求める人物像</h3>
-      <p></p>
+      <p>・明るく元気な対応ができる方<br>・チームワークを大切にできる方<br>・新しいことに挑戦する意欲のある方</p>
     </section>
 
     <section class="animate-section">
@@ -248,9 +233,9 @@
       
       <ul class="detail-list">
         <li><span class="label">雇用形態</span><span class="value">正社員</span></li>
-        <li><span class="label">試用期間</span><span class="value"></span></li>
-        <li><span class="label">勤務時間</span><span class="value"></span></li>
-        <li><span class="label">みなし残業</span><span class="value">時間</span></li>
+        <li><span class="label">試用期間</span><span class="value">3ヶ月</span></li>
+        <li><span class="label">勤務時間</span><span class="value">9:00 〜 18:00 (実働8時間)</span></li>
+        <li><span class="label">みなし残業</span><span class="value">20時間</span></li>
       </ul>
 
       <div style="margin-top:30px;">
@@ -261,8 +246,8 @@
               月給 300000円 〜 200000円
             </td>
           </tr>
-          <tr><th>インセンティブ</th><td></td></tr>
-          <tr><th>フルコミッション</th><td></td></tr>
+          <tr><th>インセンティブ</th><td>あり (業績による)</td></tr>
+          <tr><th>フルコミッション</th><td>なし</td></tr>
           <tr><th>賞与</th><td>業績により支給</td></tr>
           <tr><th>決算月</th><td>4月</td></tr>
         </table>
@@ -272,34 +257,34 @@
     <section class="animate-section">
       <h2>休日・福利厚生</h2>
       <table class="data-table">
-        <tr><th>休日</th><td></td></tr>
-        <tr><th>休暇</th><td></td></tr>
-        <tr><th>年間休日</th><td>日</td></tr>
-        <tr><th>補足</th><td></td></tr>
-        <tr><th>福利厚生</th><td></td></tr>
-        <tr><th>その他</th><td></td></tr>
-        <tr><th>退職金制度</th><td></td></tr>
+        <tr><th>休日</th><td>完全週休2日制 (土日祝)</td></tr>
+        <tr><th>休暇</th><td>年末年始 / 夏季 / 有給休暇</td></tr>
+        <tr><th>年間休日</th><td>120日</td></tr>
+        <tr><th>補足</th><td>会社カレンダーによる</td></tr>
+        <tr><th>福利厚生</th><td>各種社会保険完備 / 交通費支給</td></tr>
+        <tr><th>その他</th><td>資格取得支援制度 / 定期健康診断</td></tr>
+        <tr><th>退職金制度</th><td>あり (勤続3年以上)</td></tr>
       </table>
     </section>
 
     <section class="animate-section">
       <h2>応募資格</h2>
       <ul class="detail-list">
-        <li><span class="label">学歴</span><span class="value"></span></li>
-        <li><span class="label">必須経験</span><span class="value"></span></li>
-        <li><span class="label">経験月数</span><span class="value"></span></li>
-        <li><span class="label">必須資格</span><span class="value"></span></li>
-        <li><span class="label">歓迎スキル</span><span class="value"></span></li>
+        <li><span class="label">学歴</span><span class="value">不問</span></li>
+        <li><span class="label">必須経験</span><span class="value">未経験OK</span></li>
+        <li><span class="label">経験月数</span><span class="value">特になし</span></li>
+        <li><span class="label">必須資格</span><span class="value">普通自動車免許 (AT限定可)</span></li>
+        <li><span class="label">歓迎スキル</span><span class="value">基本的なPCスキル</span></li>
       </ul>
     </section>
 
     <section class="animate-section">
       <h2>企業情報</h2>
       <ul class="detail-list">
-        <li><span class="label">正社員数</span><span class="value">名</span></li>
-        <li><span class="label">パート数</span><span class="value">名</span></li>
-        <li><span class="label">平均年齢</span><span class="value"></span></li>
-        <li><span class="label">男女比</span><span class="value"></span></li>
+        <li><span class="label">正社員数</span><span class="value">10名</span></li>
+        <li><span class="label">パート・アルバイト</span><span class="value">5名</span></li>
+        <li><span class="label">平均年齢</span><span class="value">32歳</span></li>
+        <li><span class="label">男女比</span><span class="value">男性 6 : 女性 4</span></li>
       </ul>
       
       <div style="margin-top:30px; background:#f9f9f9; padding:20px; border-radius:10px;">
