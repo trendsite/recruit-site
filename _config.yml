@@ -1,6 +1,4 @@
-# Site settings
 url: https://jobs.trend-recruit.biz
 baseurl: ""
-
-# Jekyll plugins
+theme: null
 plugins: []
