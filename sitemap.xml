@@ -1,13 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://jobs.trend-recruit.biz/</loc>
+    <lastmod>2026-01-29</lastmod>
   </url>
-
   <url>
     <loc>https://jobs.trend-recruit.biz/jobs/</loc>
+    <lastmod>2026-01-29</lastmod>
   </url>
-
+  <url>
+    <loc>https://jobs.trend-recruit.biz/jobs/20260103235627.html</loc>
+    <lastmod>2026-01-29</lastmod>
+  </url>
+  <url>
+    <loc>https://jobs.trend-recruit.biz/jobs/20260104181033.html</loc>
+    <lastmod>2026-01-29</lastmod>
+  </url>
+  <url>
+    <loc>https://jobs.trend-recruit.biz/jobs/20260104183800.html</loc>
+    <lastmod>2026-01-29</lastmod>
+  </url>
+  <url>
+    <loc>https://jobs.trend-recruit.biz/jobs/20260104191517.html</loc>
+    <lastmod>2026-01-29</lastmod>
+  </url>
+  <url>
+    <loc>https://jobs.trend-recruit.biz/jobs/20260105094158.html</loc>
+    <lastmod>2026-01-29</lastmod>
+  </url>
+  <url>
+    <loc>https://jobs.trend-recruit.biz/jobs/20260107172224.html</loc>
+    <lastmod>2026-01-29</lastmod>
+  </url>
+  <url>
+    <loc>https://jobs.trend-recruit.biz/jobs/20260122105914.html</loc>
+    <lastmod>2026-01-29</lastmod>
+  </url>
+  <url>
+    <loc>https://jobs.trend-recruit.biz/jobs/20260128180331.html</loc>
+    <lastmod>2026-01-29</lastmod>
+  </url>
+  <url>
+    <loc>https://jobs.trend-recruit.biz/jobs/20260129101410.html</loc>
+    <lastmod>2026-01-29</lastmod>
+  </url>
+  <url>
+    <loc>https://jobs.trend-recruit.biz/jobs/20260129103921.html</loc>
+    <lastmod>2026-01-29</lastmod>
+  </url>
+  <url>
+    <loc>https://jobs.trend-recruit.biz/jobs/20260129105425.html</loc>
+    <lastmod>2026-01-29</lastmod>
+  </url>
+  <url>
+    <loc>https://jobs.trend-recruit.biz/jobs/20260129144508.html</loc>
+    <lastmod>2026-01-29</lastmod>
+  </url>
 </urlset>
